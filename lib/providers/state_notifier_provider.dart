@@ -1,11 +1,22 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:riverpodexm/Model/state_notifier_model.dart';
+// import 'dart:ffi';
 
-// class StateNotifierExample extends StateNotifier<StateNotifierModel> {
-//   StateNotifierExample(super.state);
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpodexm/Model/state_notifier_model.dart';
 
-//   void updateName(String na) {
-//     state = state.copyWth();
-//   }
-// }
+class StateNotifierExample extends StateNotifier<StateNotifierModelExample> {
+  StateNotifierExample()
+      : super(const StateNotifierModelExample(
+            name: "Exmple", age: 0, isStudent: false));
+
+  void updateName(String na) {
+    state = state.copyWith(name: na);
+  }
+
+  void updateAge(int ag) {
+    state = state.copyWith(age: ag);
+  }
+}
+
+final stateNotifierExmpleProvider =
+    StateNotifierProvider<StateNotifierExample, StateNotifierModelExample>(
+        (ref) => StateNotifierExample());

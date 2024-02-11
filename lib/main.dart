@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpodexm/Screens/provider_screen.dart';
-import 'package:riverpodexm/Screens/state_provider_screen.dart';
+import 'package:riverpodexm/Screens/future_provider_screen.dart';
+import 'package:riverpodexm/Screens/state_notifier_screen.dart';
+// import 'package:riverpodexm/Screens/provider_screen.dart';
+// import 'package:riverpodexm/Screens/state_provider_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: ProviderScreen(),
-        home: StateProviderExmple(),
+        // home: StateProviderExmple(),
+        home: FutureProviderScreen(),
+        // home: StateNotifierExampleScreen(),
       ),
     );
   }
