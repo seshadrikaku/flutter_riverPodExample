@@ -10,3 +10,9 @@ final dataProvider =
   final repositoryData = ref.watch(exmpleForFutureProvider);
   return repositoryData.GetFutureProviderData();
 });
+
+final futureProviderById =
+    FutureProvider.family<FutureProviderExampleModel, int>((ref, id) async {
+  final repositoryData = ref.watch(exmpleForFutureProvider);
+  return repositoryData.getFutureProviderDataById(id);
+});
